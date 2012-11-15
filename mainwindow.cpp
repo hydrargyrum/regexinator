@@ -25,6 +25,8 @@ QRegExp MainWindow::CreateRegExp(QString text) {
     else
         re = QRegExp(text, Qt::CaseInsensitive);
 
+	// this cast is quite safe since the indexes will always be in
+	// range of the PatternSyntax enum.
     re.setPatternSyntax((QRegExp::PatternSyntax) ui->cmbPatternSyntax->currentIndex());
     return re;
 }
