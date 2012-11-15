@@ -20,6 +20,13 @@ void MainWindow::compileRegex() {
 		ui->targetBox->doHighlight(re);
 }
 
+void MainWindow::updateHighlighting() {
+    if (ui->regexBox->textCursor().selectedText().isEmpty())
+        compileRegex();
+    else
+        compileSelectedRegex();
+}
+
 
 QRegExp MainWindow::CreateRegExp(QString text) {
     QRegExp re;

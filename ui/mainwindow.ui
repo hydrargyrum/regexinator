@@ -132,7 +132,7 @@
      <x>0</x>
      <y>0</y>
      <width>319</width>
-     <height>22</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
@@ -151,11 +151,11 @@
    <sender>regexBox</sender>
    <signal>selectionChanged()</signal>
    <receiver>MainWindow</receiver>
-   <slot>compileSelectedRegex()</slot>
+   <slot>updateHighlighting()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>181</x>
-     <y>68</y>
+     <x>99</x>
+     <y>79</y>
     </hint>
     <hint type="destinationlabel">
      <x>646</x>
@@ -167,7 +167,7 @@
    <sender>regexBox</sender>
    <signal>textChanged()</signal>
    <receiver>MainWindow</receiver>
-   <slot>compileRegex()</slot>
+   <slot>updateHighlighting()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>230</x>
@@ -179,9 +179,74 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>cmbPatternSyntax</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateHighlighting()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>351</x>
+     <y>455</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkNewLineMode</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateHighlighting()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>335</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>202</x>
+     <y>510</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkCaseSensitive</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateHighlighting()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>499</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>targetBox</sender>
+   <signal>textChanged()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateHighlighting()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>79</x>
+     <y>569</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>compileSelectedRegex()</slot>
   <slot>compileRegex()</slot>
+  <slot>updateHighlighting()</slot>
  </slots>
 </ui>

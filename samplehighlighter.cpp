@@ -7,6 +7,23 @@ SampleHighlighter::SampleHighlighter(QWidget *parent) :
 {
 }
 
+void SampleHighlighter::setHtml(const QString &text) {
+    // ugly hack: QTextEdit::setHtml emits textChanged so it becomes recursive
+    bool previouslyBlocked = signalsBlocked();
+    if (!previouslyBlocked)
+        blockSignals(true);
+
+    // keep cursor position
+    int cursorPos = textCursor().position();
+    QTextEdit::setHtml(text);
+    QTextCursor cursor = textCursor();
+    cursor.setPosition(cursorPos);
+    setTextCursor(cursor);
+
+    if (!previouslyBlocked)
+        blockSignals(false);
+}
+
 void SampleHighlighter::doHighlight(const QRegExp &re) {
 	setHtml(highlight(this->toPlainText(), re));
 }

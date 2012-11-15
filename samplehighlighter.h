@@ -10,9 +10,12 @@ class SampleHighlighter : public QTextEdit {
 public:
     explicit SampleHighlighter(QWidget *parent = 0);
 
+    void setHtml(const QString &text);
+
 public slots:
     void doHighlight(const QRegExp &re);
 	void doMultiHighlight(const QRegExp &re);
+
 private:
 	QString highlight(const QString &text, const QRegExp re);
     QString escapeHtml(QString text);

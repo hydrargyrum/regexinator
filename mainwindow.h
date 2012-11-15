@@ -18,6 +18,8 @@ private slots:
     void compileSelectedRegex();
 	void compileRegex();
 
+    void updateHighlighting();
+
 private:
     QRegExp CreateRegExp(QString text);
     QWidget *parent;
