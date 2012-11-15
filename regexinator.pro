@@ -10,11 +10,13 @@ DEPENDPATH += . ui
 INCLUDEPATH += .
 
 # Input
-HEADERS += mainwindow.h
+HEADERS += mainwindow.h \
+    samplehighlighter.h
 FORMS += ui/mainwindow.ui
 SOURCES += \
     mainwindow.cpp \
-    main.cpp
+    main.cpp \
+    samplehighlighter.cpp
 
 FORMS += \
     ui/mainwindow.ui
