@@ -7,12 +7,24 @@ MainWindow::MainWindow(QMainWindow *parent)
 }
 
 void MainWindow::compileSelectedRegex() {
-    QRegExp re(ui->regexBox->textCursor().selectedText());
+    QRegExp re = CreateRegExp(ui->regexBox->textCursor().selectedText());
     if (re.indexIn(ui->targetBox->toPlainText()))
         qDebug() << re.capturedTexts();
 }
 
 void MainWindow::compileRegex() {
-    QRegExp re(ui->regexBox->toPlainText());
+    QRegExp re = CreateRegExp(ui->regexBox->toPlainText());
     ui->targetBox->doHighlight(re);
+}
+
+
+QRegExp MainWindow::CreateRegExp(QString text) {
+    QRegExp re;
+    if (ui->chkCaseSensitive->isChecked())
+        re = QRegExp(text, Qt::CaseSensitive);
+    else
+        re = QRegExp(text, Qt::CaseInsensitive);
+
+    re.setPatternSyntax((QRegExp::PatternSyntax) ui->cmbPatternSyntax->currentIndex());
+    return re;
 }

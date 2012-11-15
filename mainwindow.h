@@ -19,6 +19,7 @@ private slots:
 	void compileRegex();
 
 private:
+    QRegExp CreateRegExp(QString text);
     QWidget *parent;
     Ui_MainWindow *ui;
 };

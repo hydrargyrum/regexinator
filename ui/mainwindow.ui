@@ -50,6 +50,59 @@
        <attribute name="title">
         <string>Controls</string>
        </attribute>
+       <widget class="QCheckBox" name="chkCaseSensitive">
+        <property name="geometry">
+         <rect>
+          <x>164</x>
+          <y>10</y>
+          <width>121</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Case-Sensitive</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmbPatternSyntax">
+        <property name="geometry">
+         <rect>
+          <x>164</x>
+          <y>30</y>
+          <width>111</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>RegExp</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RegExp2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wildcard</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>WildcardUnix</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>FixedString</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>W3CXmlSchema11</string>
+         </property>
+        </item>
+       </widget>
       </widget>
       <widget class="QWidget" name="Extra">
        <attribute name="title">
