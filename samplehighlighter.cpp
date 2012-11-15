@@ -30,10 +30,11 @@ QString SampleHighlighter::highlight(const QString &text, const QRegExp re) {
 
 		return htmlTemplate.arg(escapeHtml(beforeText), escapeHtml(matchedText), escapeHtml(afterText));
     } else {
-        return text;
+        QString htmlTemplate = "<font color=\"grey\">%1</font>";
+        return htmlTemplate.arg(escapeHtml(text));
 	}
 }
 
 QString SampleHighlighter::escapeHtml(QString text) {
-    return text.replace('&', "&amp;").replace('<', "&lt;").replace('>', "&gt;");
+    return text.replace('&', "&amp;").replace('<', "&lt;").replace('>', "&gt;").replace('\n', "<br/>");
 }
