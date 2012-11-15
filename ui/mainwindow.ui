@@ -66,8 +66,8 @@
        <widget class="QComboBox" name="cmbPatternSyntax">
         <property name="geometry">
          <rect>
-          <x>164</x>
-          <y>30</y>
+          <x>167</x>
+          <y>50</y>
           <width>111</width>
           <height>24</height>
          </rect>
@@ -102,6 +102,19 @@
           <string>W3CXmlSchema11</string>
          </property>
         </item>
+       </widget>
+       <widget class="QCheckBox" name="chkNewLineMode">
+        <property name="geometry">
+         <rect>
+          <x>164</x>
+          <y>30</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Newline Mode</string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="Extra">

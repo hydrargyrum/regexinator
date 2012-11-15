@@ -12,8 +12,9 @@ public:
 
 public slots:
     void doHighlight(const QRegExp &re);
-
+	void doMultiHighlight(const QRegExp &re);
 private:
+	QString highlight(const QString &text, const QRegExp re);
     QString escapeHtml(QString text);
 };
 

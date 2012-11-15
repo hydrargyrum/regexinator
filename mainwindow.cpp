@@ -14,7 +14,10 @@ void MainWindow::compileSelectedRegex() {
 
 void MainWindow::compileRegex() {
     QRegExp re = CreateRegExp(ui->regexBox->toPlainText());
-    ui->targetBox->doHighlight(re);
+	if (ui->chkNewLineMode->isChecked())
+		ui->targetBox->doMultiHighlight(re);
+	else
+		ui->targetBox->doHighlight(re);
 }
 
 

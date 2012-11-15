@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Thu Nov 15 16:41:18 2012
+** Created: Thu Nov 15 18:46:19 2012
 **      by: Qt User Interface Compiler version 4.8.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -42,6 +42,7 @@ public:
     QWidget *Controls;
     QCheckBox *chkCaseSensitive;
     QComboBox *cmbPatternSyntax;
+    QCheckBox *chkNewLineMode;
     QWidget *Extra;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -85,7 +86,10 @@ public:
         chkCaseSensitive->setGeometry(QRect(164, 10, 121, 20));
         cmbPatternSyntax = new QComboBox(Controls);
         cmbPatternSyntax->setObjectName(QString::fromUtf8("cmbPatternSyntax"));
-        cmbPatternSyntax->setGeometry(QRect(164, 30, 111, 24));
+        cmbPatternSyntax->setGeometry(QRect(167, 50, 111, 24));
+        chkNewLineMode = new QCheckBox(Controls);
+        chkNewLineMode->setObjectName(QString::fromUtf8("chkNewLineMode"));
+        chkNewLineMode->setGeometry(QRect(164, 30, 111, 20));
         tabWidget->addTab(Controls, QString());
         Extra = new QWidget();
         Extra->setObjectName(QString::fromUtf8("Extra"));
@@ -127,6 +131,7 @@ public:
          << QApplication::translate("MainWindow", "FixedString", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MainWindow", "W3CXmlSchema11", 0, QApplication::UnicodeUTF8)
         );
+        chkNewLineMode->setText(QApplication::translate("MainWindow", "Newline Mode", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Controls), QApplication::translate("MainWindow", "Controls", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Extra), QApplication::translate("MainWindow", "Extra", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
