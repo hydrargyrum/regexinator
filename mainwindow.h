@@ -13,8 +13,11 @@ class MainWindow :
 public:
     explicit MainWindow(QMainWindow *parent = 0);
     virtual ~MainWindow() {}
+
 private slots:
     void compileSelectedRegex();
+	void compileRegex();
+
 private:
     QWidget *parent;
     Ui_MainWindow *ui;

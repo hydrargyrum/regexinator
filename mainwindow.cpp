@@ -11,3 +11,8 @@ void MainWindow::compileSelectedRegex() {
     if (re.indexIn(ui->targetBox->toPlainText()))
         qDebug() << re.capturedTexts();
 }
+
+void MainWindow::compileRegex() {
+    QRegExp re(ui->regexBox->toPlainText());
+    ui->targetBox->doHighlight(re);
+}
