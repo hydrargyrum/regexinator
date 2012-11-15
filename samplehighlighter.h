@@ -19,6 +19,7 @@ public slots:
 private:
 	QString highlight(const QString &text, const QRegExp re);
     QString escapeHtml(QString text);
+    QString captureColor(int capture);
 };
 
 #endif // SAMPLEHIGHLIGHTER_H
