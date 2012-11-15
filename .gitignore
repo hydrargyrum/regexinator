@@ -1,1 +1,3 @@
 regexinator
+*.o
+moc_*
